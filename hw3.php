@@ -17,6 +17,19 @@
 }
 /*echo "<pre>";
 print_r($result);*/
-$random = shuffle($a );
-print_r("$random");
+foreach ($result as $value1) {
+  	$split[] = explode (' ', $value1);
+  	}
+echo "<pre>";
+print_r($split);
+foreach ($split as $names => $words) {
+	$first_word[] = $words[0];
+	$second_word[] = $words[1];
+	shuffle($first_word);
+	shuffle($second_word);
+}
+echo "<pre>";
+print_r($first_word);
+echo "<pre>";
+print_r($second_word);
 ?>
